@@ -28,6 +28,19 @@ nav a{
     border-radius:6px;
     text-decoration:none;
     color:#c0581a;
+}
+
+header nav{
+    display:inline-flex;
+    gap:12px;
+    align-items:center;
+}
+
+header nav + nav{ margin-left:12px; }
+header nav a{
+    display:inline-block;
+    padding:8px 12px;
+    margin-right:0;
 } 
 
 main{
