@@ -1,0 +1,107 @@
+/* ---- base span behaviour ---- */
+span {
+  display: inline-block;
+}
+
+/* ---- attribute selectors for row background gradients (using exact class match) ---- */
+tr[class="read"] {
+  background-image: linear-gradient(145deg, #f4ede5, #e8dcd0);
+}
+
+tr[class="to-read"] {
+  background-image: linear-gradient(145deg, #f0e8e0, #e6dbd0);
+}
+
+tr[class="in-progress"] {
+  background-image: linear-gradient(145deg, #f6e9df, #ead8c6);
+}
+
+/* ---- status span styles per row type (descendant selectors with exact class match) ---- */
+tr[class="to-read"] span[class="status"] {
+  border: 2px solid #c0581a;
+  background-image: linear-gradient(135deg, #f0d4bc, #e5c2a5);
+}
+
+tr[class="read"] span[class="status"] {
+  border: 2px solid #c0581a;
+  background-image: linear-gradient(135deg, #e8d2ba, #dcc1a3);
+}
+
+tr[class="in-progress"] span[class="status"] {
+  border: 2px solid #c0581a;
+  background-image: linear-gradient(135deg, #f2dcc8, #e8cbb6);
+}
+
+/* ---- targeting span.status AND span elements with class starting with "rate" ---- */
+span[class="status"],
+span[class^="rate"] {
+  height: 2em;
+  width: 6em;
+  padding: 0.2em 0.6em;
+}
+
+/* ---- direct children of span elements with class starting with "rate" ---- */
+span[class^="rate"] > span {
+  border: 1px solid #9d8d7d;
+  border-radius: 3px;
+  margin: 0 2px;
+  height: 1.4em;
+  width: 1.4em;
+  background-color: #f0e0cc;
+}
+
+/* ---- first descendant of span elements containing class "one" (using ~= for whole word) ---- */
+span[class~="one"] span:first-child {
+  background-image: linear-gradient(45deg, #c0581a, #a04614);
+}
+
+/* ---- first two descendants of span elements containing class "two" ---- */
+span[class~="two"] span:first-child,
+span[class~="two"] span:nth-child(2) {
+  background-image: linear-gradient(45deg, #c0581a, #a04614);
+}
+
+/* ---- all span descendants of span elements containing class "three" ---- */
+span[class~="three"] span {
+  background-image: linear-gradient(45deg, #c0581a, #a04614);
+}
+
+/* ---- table styling ---- */
+table {
+  border-collapse: collapse;
+  width: 85%;
+  margin: 2rem auto;
+  font-family: 'Roboto', system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  box-shadow: 0 4px 12px rgba(192, 88, 26, 0.1);
+}
+
+th, td {
+  padding: 12px 8px;
+  text-align: left;
+  border-bottom: 1px solid rgba(192, 88, 26, 0.15);
+}
+
+th {
+  background-color: #fff2e6;
+  font-weight: bold;
+  color: #c0581a;
+  border-bottom: 2px solid #c0581a;
+}
+
+thead tr {
+  background-color: #fff2e6;
+}
+
+span.status {
+  padding: 0.3em 0.8em;
+  border-radius: 4px;
+  font-weight: 500;
+  color: #2e2b23;
+  text-align: center;
+}
+
+span[class^="rate"] {
+  text-align: center;
+  background: transparent;
+  border: none;
+}

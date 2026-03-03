@@ -6,13 +6,75 @@
     <title>ITIS 3135 — Inventory</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/default.css">
+    <link rel="stylesheet" href="styles/inventory.css">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div data-include="components/header.html"></div>
 
     <main>
-        <h2>Inventory</h2>
+        <h2>Outback Library Inventory</h2>
+
+        <table>
+        <thead>
+            <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Category</th>
+            <th>Status</th>
+            <th>Rate</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="read">
+            <td>The Art of Noticing</td>
+            <td>Rob Walker</td>
+            <td>Observation Skills</td>
+            <td><span class="status">Read</span></td>
+            <td><span class="rate three"><span></span><span></span><span></span></span></td>
+            </tr>
+
+            <tr class="to-read">
+            <td>The Kangaroo's Guide to Watching</td>
+            <td>M. Hopgood</td>
+            <td>Animal Wisdom</td>
+            <td><span class="status">To Read</span></td>
+            <td><span class="rate"><span></span><span></span><span></span></span></td>
+            </tr>
+
+            <tr class="in-progress">
+            <td>Deep Observations of the Outback</td>
+            <td>M. T. Hopping</td>
+            <td>Nature Studies</td>
+            <td><span class="status">In Progress</span></td>
+            <td><span class="rate three"><span></span><span></span><span></span></span></td>
+            </tr>
+
+            <tr class="read">
+            <td>Quiet: The Power of Introverts</td>
+            <td>Susan Cain</td>
+            <td>Psychology</td>
+            <td><span class="status">Read</span></td>
+            <td><span class="rate two"><span></span><span></span><span></span></span></td>
+            </tr>
+
+            <tr class="read">
+            <td>What the Robin Knows</td>
+            <td>Jon Young</td>
+            <td>Animal Behavior</td>
+            <td><span class="status">Read</span></td>
+            <td><span class="rate three"><span></span><span></span><span></span></span></td>
+            </tr>
+
+            <tr class="to-read">
+            <td>The Hidden Life of Trees</td>
+            <td>Peter Wohlleben</td>
+            <td>Nature</td>
+            <td><span class="status">To Read</span></td>
+            <td><span class="rate"><span></span><span></span><span></span></span></td>
+            </tr>
+        </tbody>
+        </table>
     </main>
 
     <div data-include="components/footer.html"></div>

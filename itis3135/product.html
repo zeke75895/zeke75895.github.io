@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITIS 3135 — Product</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/default.css">
+    <link rel="stylesheet" href="styles/product.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div data-include="components/header.html"></div>
+
+    <main>
+        <h2>Observant Kangaroo's Tech & Outback Gear</h2>
+
+        <!-- FEATURES section -->
+        <section id="features" class="section">
+            <h3>Why Choose Our Outback Tech</h3>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <span class="feature-icon">☀️</span>
+                    <h4>24hr Outback Battery</h4>
+                    <p>Solar-powered tech gear designed for the bush's intense sun.</p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">💧</span>
+                    <h4>Waterproof to Billabong Depth</h4>
+                    <p>Rugged devices built to survive pristine outback waters.</p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🔍</span>
+                    <h4>AI-Powered Wildlife Detection</h4>
+                    <p>Our signature product—spot the roos, koalas, and more with AI.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIDEO SECTION -->
+        <section id="video-section" class="section">
+            <h3>See Our Products in Action</h3>
+            <iframe id="video" 
+                    src="https://www.youtube.com/embed/watch?v=3rIpWLYkw5g" 
+                    title="Observant Kangaroo Gear Demo"
+                    allowfullscreen></iframe>
+        </section>
+
+        <!-- PRICING section -->
+        <section id="pricing" class="section">
+            <h3>Outback Gear Pricing</h3>
+            <div class="pricing-cards">
+                <div class="card">
+                    <h4>🦘 Bushwalker Basic</h4>
+                    <p class="price">$99</p>
+                    <p>Entry-level AI tools & wildlife detection starter pack</p>
+                </div>
+                <div class="card highlight">
+                    <h4>🦘 Roo Ranger Pro</h4>
+                    <p class="price">$179</p>
+                    <p>Advanced features + wildlife tracking + solar charging</p>
+                </div>
+                <div class="card">
+                    <h4>🦘 Outback Unlimited</h4>
+                    <p class="price">$249</p>
+                    <p>Full suite + personal AI assistant + lifetime updates</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- EMAIL FORM SECTION -->
+        <section id="stay" class="section form-section">
+            <h3>Get the latest Bush Telegraph Updates</h3>
+            <form id="form" action="https://www.freecodecamp.org/email-submit">
+                <input type="email" id="email" name="email" placeholder="Enter your billabong email address">
+                <input type="submit" id="submit" value="Stay Updated">
+            </form>
+        </section>
+    </main>
+
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>
+    

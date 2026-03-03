@@ -1,0 +1,250 @@
+/* Observant Kangaroo's Tech & Outback Gear – Product Landing Page */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  background: #fffaf6;
+  color: #2e2b23;
+  line-height: 1.55;
+  font-size: 17px;
+}
+
+main {
+  padding: 0 1.5rem 2rem;
+}
+
+h2 {
+  text-align: center;
+  color: #c0581a;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 2rem 0;
+  font-family: 'Merriweather', Georgia, serif;
+}
+
+h3 {
+  color: #c0581a;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #c0581a;
+  padding-left: 1rem;
+}
+
+h4 {
+  color: #c0581a;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  max-width: 900px;
+  margin: 2.5rem auto;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  background: rgba(255, 242, 230, 0.5);
+  border: 2px solid rgba(192, 88, 26, 0.1);
+  box-shadow: 0 4px 12px rgba(192, 88, 26, 0.05);
+}
+
+/* ===== FEATURE GRID ===== */
+.feature-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.feature-item {
+  flex: 1 1 220px;
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(192, 88, 26, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid rgba(192, 88, 26, 0.1);
+}
+
+.feature-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(192, 88, 26, 0.15);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.feature-item p {
+  color: #6b5b4a;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* ===== VIDEO ===== */
+#video {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+  border: 2px solid rgba(192, 88, 26, 0.15);
+  box-shadow: 0 8px 16px rgba(192, 88, 26, 0.1);
+}
+
+/* ===== PRICING CARDS ===== */
+.pricing-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.card {
+  flex: 1 1 240px;
+  background: white;
+  border-radius: 12px;
+  padding: 1.8rem;
+  box-shadow: 0 4px 12px rgba(192, 88, 26, 0.1);
+  text-align: center;
+  border: 2px solid rgba(192, 88, 26, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(192, 88, 26, 0.15);
+}
+
+.card.highlight {
+  background: linear-gradient(135deg, #fff2e6 0%, #fffaf6 100%);
+  border: 2px solid #c0581a;
+  transform: scale(1.04);
+}
+
+.card.highlight:hover {
+  transform: scale(1.04) translateY(-4px);
+}
+
+.card h4 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.card p {
+  color: #6b5b4a;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0.5rem 0;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #c0581a;
+  margin: 1rem 0;
+}
+
+/* ===== FORM SECTION ===== */
+.form-section {
+  background: linear-gradient(135deg, #fff2e6 0%, #fffaf6 100%);
+  text-align: center;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 450px;
+  margin: 1.5rem auto 0;
+}
+
+#email {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  border: 2px solid rgba(192, 88, 26, 0.3);
+  border-radius: 8px;
+  outline: none;
+  background: white;
+  color: #2e2b23;
+  transition: border-color 0.2s;
+}
+
+#email:focus {
+  border-color: #c0581a;
+  box-shadow: 0 0 0 3px rgba(192, 88, 26, 0.1);
+}
+
+#email::placeholder {
+  color: #9d8d7d;
+  font-style: italic;
+}
+
+#submit {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  background: #c0581a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+#submit:hover {
+  background: #a04614;
+  transform: translateY(-2px);
+}
+
+#submit:active {
+  transform: translateY(0);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  .section {
+    margin: 2rem auto;
+    padding: 1.5rem 1rem;
+  }
+
+  .feature-item {
+    flex: 1 1 100%;
+  }
+
+  .card {
+    flex: 1 1 100%;
+  }
+
+  .card.highlight {
+    transform: scale(1);
+  }
+
+  .card.highlight:hover {
+    transform: translateY(-4px);
+  }
+
+  #form {
+    width: 90%;
+  }}

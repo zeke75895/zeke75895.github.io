@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITIS 3135 — Instructions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/default.css">
+    <link rel="stylesheet" href="styles/documentation.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div data-include="components/header.html"></div>
+
+    
+    <!-- fixed left navbar (visible on laptops/desktops) -->
+    <nav id="navbar">
+        <header>📘 Core JavaScript concepts</header>
+        <a class="nav-link" href="#Variables_and_Scope">Variables and Scope</a>
+        <a class="nav-link" href="#Data_Types">Data Types</a>
+        <a class="nav-link" href="#Functions_and_Closures">Functions and Closures</a>
+        <a class="nav-link" href="#Control_Flow">Control Flow</a>
+        <a class="nav-link" href="#Objects_and_Prototypes">Objects and Prototypes</a>
+        <a class="nav-link" href="#Error_Handling">Error Handling</a>
+    </nav>
+
+    <!-- main documentation area -->
+    <main id="main-doc">
+
+        <!-- section 1 - Variables_and_Scope -->
+        <section class="main-section" id="Variables_and_Scope">
+        <header>Variables and Scope</header>
+        <p>Variables are containers for storing data values. In JavaScript, variables are declared with <code>var</code>, <code>let</code>, or <code>const</code>.</p>
+        <p>The <code>let</code> keyword declares a block-scoped variable, while <code>var</code> declares a function‑scoped or globally‑scoped variable.</p>
+        <p><code>const</code> creates a constant reference that cannot be reassigned. However, if the value is an object, its properties can still be modified.</p>
+        <p>Scope determines the accessibility of variables. Global variables are accessible everywhere; local variables are limited to the function or block they are defined in.</p>
+        <pre><code>let x = 10;
+    const PI = 3.14;
+    if (true) {
+    let y = 20;  // block scoped
+    var z = 30;  // function scoped (or global if not inside function)
+    }</code></pre>
+        <p>Understanding scope helps avoid naming conflicts and unintended mutations.</p>
+        <ul>
+            <li><code>var</code> – function scope, hoisted, can be redeclared.</li>
+            <li><code>let</code> – block scope, not hoisted in the same way, cannot be redeclared in same block.</li>
+            <li><code>const</code> – block scope, must be initialized, cannot be reassigned.</li>
+        </ul>
+        </section>
+
+        <!-- section 2 - Data_Types -->
+        <section class="main-section" id="Data_Types">
+        <header>Data Types</header>
+        <p>JavaScript has dynamic typing. The same variable can hold different types. Primitive types include <code>string</code>, <code>number</code>, <code>boolean</code>, <code>null</code>, <code>undefined</code>, <code>symbol</code>, and <code>bigint</code>.</p>
+        <p>Everything else is an object (including arrays, functions, dates). Use <code>typeof</code> to inspect the type.</p>
+        <p>Strings can be created with single quotes, double quotes, or backticks (template literals).</p>
+        <p>Numbers are always floating‑point; there is no separate integer type. Special numeric values: <code>NaN</code>, <code>Infinity</code>.</p>
+        <pre><code>let age = 25;               // number
+    let name = "Ada";           // string
+    let isLogged = true;        // boolean
+    let empty = null;           // null
+    let notDefined;             // undefined</code></pre>
+        <ul>
+            <li>Use <code>Number()</code> or <code>parseInt()</code> for conversion.</li>
+            <li><code>BigInt</code> is for integers larger than 2^53-1.</li>
+        </ul>
+        <p>Type coercion happens automatically in comparisons and arithmetic.</p>
+        </section>
+
+        <!-- section 3 - Functions_and_Closures -->
+        <section class="main-section" id="Functions_and_Closures">
+        <header>Functions and Closures</header>
+        <p>Functions are first‑class objects. They can be declared with the <code>function</code> keyword or as arrow functions (<code>=></code>).</p>
+        <p>A closure is formed when a function retains access to its outer (lexical) scope even after the outer function has returned.</p>
+        <pre><code>function outer() {
+    let count = 0;
+    return function inner() {
+        count++;
+        return count;
+    };
+    }
+    const counter = outer();</code></pre>
+        <p>Closures are useful for data encapsulation and creating factory functions.</p>
+        <p>Arrow functions do not have their own <code>this</code> and are not suitable for methods that need dynamic context.</p>
+        <ul>
+            <li>Function declaration vs expression</li>
+            <li>Parameters and default values (<code>function(a, b = 1)</code>)</li>
+            <li>Rest parameters <code>...args</code></li>
+            <li>Immediately Invoked Function Expressions (IIFE)</li>
+        </ul>
+        <p>Higher‑order functions accept or return other functions.</p>
+        </section>
+
+        <!-- section 4 - Control_Flow -->
+        <section class="main-section" id="Control_Flow">
+        <header>Control Flow</header>
+        <p>Control flow statements determine the order in which code executes. Conditional statements: <code>if...else</code>, <code>switch</code>.</p>
+        <p>Loops: <code>for</code>, <code>while</code>, <code>do...while</code>, and <code>for...in</code> (for object properties) or <code>for...of</code> (for iterables).</p>
+        <pre><code>let i = 0;
+    while (i < 3) {
+    console.log(i);
+    i++;
+    }
+
+    for (let j = 0; j < 3; j++) {
+    if (j === 1) continue;  // skip iteration
+    console.log(j);
+    }</code></pre>
+        <p>Break exits a loop early; continue skips to the next iteration.</p>
+        <p>Switch compares using strict equality (<code>===</code>).</p>
+        <ul>
+            <li><code>if...else if...else</code></li>
+            <li><code>switch (expression) { case value: ... }</code></li>
+            <li><code>for...in</code> vs <code>for...of</code></li>
+        </ul>
+        <p>Logical operators (<code>&&</code>, <code>||</code>, <code>!</code>) are often used to short‑circuit.</p>
+        </section>
+
+        <!-- section 5 - Objects_and_Prototypes -->
+        <section class="main-section" id="Objects_and_Prototypes">
+        <header>Objects and Prototypes</header>
+        <p>Objects are collections of key‑value pairs. They can be created using object literals <code>{}</code>, constructors, or <code>Object.create()</code>.</p>
+        <p>Every object in JavaScript has a prototype (except the root object). The prototype chain is used for inheritance.</p>
+        <pre><code>const person = {
+    name: 'Lee',
+    greet() {
+        return `Hi, I'm ${this.name}`;
+    }
+    };
+    console.log(person.greet());</code></pre>
+        <p>ES6 introduced classes (syntactic sugar over prototypes).</p>
+        <p>You can access properties with dot notation or brackets <code>obj['prop']</code>.</p>
+        <ul>
+            <li>Prototype property vs <code>__proto__</code></li>
+            <li>Constructor functions and <code>new</code> keyword</li>
+            <li><code>hasOwnProperty</code> vs inherited properties</li>
+            <li>Object methods: <code>keys()</code>, <code>values()</code>, <code>assign()</code></li>
+        </ul>
+        <p>Arrays are special objects with numeric keys and a <code>length</code> property.</p>
+        </section>
+
+        <!-- section 6 - Error_Handling -->
+        <section class="main-section" id="Error_Handling">
+        <header>Error Handling</header>
+        <p>JavaScript provides the <code>try...catch</code> statement to handle runtime errors gracefully. The <code>finally</code> block runs regardless of an error.</p>
+        <pre><code>try {
+    let result = riskyOperation();
+    console.log(result);
+    } catch (error) {
+    console.error('Caught error:', error.message);
+    } finally {
+    console.log('Cleanup actions');
+    }</code></pre>
+        <p>You can throw your own errors using <code>throw new Error('message')</code>. Error types: <code>TypeError</code>, <code>ReferenceError</code>, <code>SyntaxError</code>, etc.</p>
+        <p>Proper error handling prevents application crashes and improves user experience.</p>
+        <ul>
+            <li>Always catch specific errors when possible.</li>
+            <li>Use <code>finally</code> for closing resources.</li>
+            <li>Custom error classes can extend <code>Error</code>.</li>
+            <li>Avoid throwing non‑Error objects.</li>
+            <li>Async errors need <code>.catch()</code> or <code>try/catch</code> with async/await.</li>
+        </ul>
+        <p>Debugging with <code>console</code> methods or browser dev tools is common.</p>
+        </section>
+    </main>
+
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>

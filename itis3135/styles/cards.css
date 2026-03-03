@@ -1,0 +1,78 @@
+/* Bushland Trading Cards – Outback Emporium */
+#playing-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 2rem;
+  background: linear-gradient(145deg, #f4f1ed 0%, #fffaf6 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+  font-family: 'Merriweather', Georgia, serif;
+}
+
+h2 {
+  width: 100%;
+  text-align: center;
+  color: #c0581a;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 260px;
+  background: linear-gradient(135deg, #fffaf6 0%, #fff2e6 100%);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 16px rgba(192, 88, 26, 0.15),
+              inset 0 -2px 0 rgba(192, 88, 26, 0.08);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  border: 2px solid rgba(192, 88, 26, 0.15);
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(192, 88, 26, 0.25);
+}
+
+.card-front {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.animal-icon {
+  font-size: 4rem;
+  margin-bottom: 0.8rem;
+  line-height: 1;
+}
+
+.card h3 {
+  color: #c0581a;
+  margin: 0.5rem 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.rank {
+  color: #6b5b4a;
+  font-size: 0.85rem;
+  font-style: italic;
+  margin: 0.3rem 0;
+}
+
+.fact {
+  color: #2e2b23;
+  font-size: 0.9rem;
+  margin: 0.8rem 0 0 0;
+  line-height: 1.4;
+}
+
+
