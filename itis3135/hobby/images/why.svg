@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="Inspiration and lightbulb icon">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#102a43"/>
+      <stop offset="100%" stop-color="#07112c"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#bg)"/>
+  <path d="M300 140 C260 140 220 180 220 220 C220 260 260 320 300 320 C340 320 380 260 380 220 C380 180 340 140 300 140 Z" fill="#fde68a" opacity="0.95"/>
+  <path d="M290 320 L290 350 L310 350 L310 320" fill="#fbbf24"/>
+  <path d="M280 150 L320 150" stroke="#134e4a" stroke-width="8"/>
+  <path d="M290 160 L310 160" stroke="#134e4a" stroke-width="6"/>
+  <text x="150" y="80" font-family="sans-serif" font-size="40" fill="#f8fafc" opacity="0.9">Why</text>
+  <text x="150" y="120" font-family="sans-serif" font-size="40" fill="#f8fafc" opacity="0.9">Sketch?</text>
+</svg>

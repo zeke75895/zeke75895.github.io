@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="Sketching group icon">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1f2a3a"/>
+      <stop offset="100%" stop-color="#0a121b"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#bg)"/>
+  <circle cx="180" cy="220" r="50" fill="#60a5fa" opacity="0.9"/>
+  <circle cx="320" cy="210" r="55" fill="#34d399" opacity="0.9"/>
+  <circle cx="420" cy="240" r="45" fill="#f472b6" opacity="0.9"/>
+  <path d="M140 280 C170 310 260 310 300 280" stroke="#e2e8f0" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <path d="M330 290 C360 320 450 320 480 290" stroke="#e2e8f0" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <text x="50" y="60" font-family="sans-serif" font-size="40" fill="#f8fafc" opacity="0.8">Club</text>
+  <text x="50" y="105" font-family="sans-serif" font-size="40" fill="#f8fafc" opacity="0.8">Members</text>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="City sketch icon">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2e4a6b"/>
+      <stop offset="100%" stop-color="#11202d"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#sky)"/>
+  <g fill="#e0e7ff" opacity="0.9">
+    <rect x="60" y="220" width="80" height="120" rx="10"/>
+    <rect x="160" y="200" width="70" height="140" rx="10"/>
+    <rect x="250" y="240" width="90" height="100" rx="10"/>
+    <rect x="360" y="190" width="60" height="150" rx="10"/>
+    <rect x="440" y="230" width="90" height="110" rx="10"/>
+  </g>
+  <path d="M150 310 L500 310" stroke="#fcd34d" stroke-width="8" stroke-linecap="round"/>
+  <path d="M120 280 L160 320 L200 280" fill="none" stroke="#fcd34d" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="100" cy="90" r="40" fill="#fbbf24"/>
+  <path d="M130 70 C135 90 140 110 125 120" stroke="#ffffff" stroke-width="4" fill="none"/>
+</svg>

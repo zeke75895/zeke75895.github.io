@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Urban sketching icon">
+  <rect width="64" height="64" rx="12" fill="#0b2942"/>
+  <path d="M18 46 L26 34 L38 46" fill="none" stroke="#fcd34d" stroke-width="4" stroke-linecap="round"/>
+  <path d="M26 34 L30 12 L34 34" fill="none" stroke="#fcd34d" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="46" cy="22" r="6" fill="#60a5fa"/>
+  <path d="M44 18 L48 26" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+</svg>

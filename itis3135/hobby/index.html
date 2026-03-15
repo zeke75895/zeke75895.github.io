@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Sketching Club | Hobby</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <style>
+        :root {
+            --bg: #091e35;
+            --bg2: #0e2b4b;
+            --card: rgba(255, 255, 255, 0.12);
+            --text: #eef5ff;
+            --muted: rgba(238, 245, 255, 0.75);
+            --accent: #f6c90e;
+            --accent-2: #34d399;
+            --border: rgba(238, 245, 255, 0.18);
+            --shadow: 0 14px 38px rgba(0, 0, 0, 0.35);
+            --radius: 18px;
+            --max: 950px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: linear-gradient(160deg, var(--bg), var(--bg2));
+            min-height: 100vh;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.2s ease-in-out;
+        }
+
+        a:hover {
+            color: var(--accent-2);
+        }
+
+        a:focus {
+            outline: 3px solid rgba(246, 201, 14, 0.85);
+            outline-offset: 2px;
+        }
+
+        header {
+            padding: 1.25rem 1.5rem;
+            border-bottom: 1px solid var(--border);
+            background: rgba(7, 25, 48, 0.72);
+            backdrop-filter: blur(8px);
+        }
+
+        .site-title {
+            margin: 0;
+            font-size: clamp(1.9rem, 2.4vw, 2.6rem);
+            letter-spacing: 0.03em;
+        }
+
+        nav {
+            margin-top: 0.85rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.65rem;
+            font-weight: 600;
+        }
+
+        .nav-link {
+            padding: 0.55rem 0.75rem;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid transparent;
+            transition: background 0.2s ease, border-color 0.2s ease;
+        }
+
+        .nav-link:hover,
+        .nav-link:focus {
+            background: rgba(255, 255, 255, 0.14);
+            border-color: rgba(255, 255, 255, 0.28);
+        }
+
+        .active {
+            background: rgba(246, 201, 14, 0.25);
+            border-color: rgba(246, 201, 14, 0.5);
+            color: #0b1e35;
+        }
+
+        .divider {
+            color: rgba(238, 245, 255, 0.68);
+            font-size: 1.1rem;
+            user-select: none;
+        }
+
+        main {
+            max-width: var(--max);
+            margin: 2.25rem auto 3rem;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            display: none;
+        }
+
+        section.active {
+            display: block;
+            animation: fadeIn 350ms ease;
+        }
+
+        .section-title {
+            font-size: clamp(1.75rem, 2.2vw, 2.2rem);
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+            letter-spacing: 0.01em;
+        }
+
+        section p,
+        section ul {
+            margin-top: 0.75rem;
+            margin-bottom: 0.75rem;
+            max-width: 780px;
+        }
+
+        section ul {
+            padding-left: 1.25rem;
+        }
+
+        .card {
+            padding: 1.25rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            background: var(--card);
+            box-shadow: var(--shadow);
+            margin: 1.25rem 0;
+        }
+
+        figure {
+            margin: 1.5rem 0;
+            padding: 0;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 20px 55px rgba(0, 0, 0, 0.35);
+        }
+
+        figure img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        figcaption {
+            padding: 0.8rem 1rem;
+            background: rgba(7, 18, 34, 0.64);
+            color: var(--muted);
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        .prompt {
+            font-style: italic;
+            color: rgba(238, 245, 255, 0.78);
+            margin: 0.4rem 0 1.25rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.25rem 0;
+        }
+
+        th,
+        td {
+            padding: 0.7rem 0.85rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        th {
+            text-align: left;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .small-muted {
+            color: rgba(238, 245, 255, 0.7);
+            font-size: 0.95rem;
+        }
+
+        footer {
+            padding: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            text-align: center;
+            font-size: 0.95rem;
+            background: rgba(0, 0, 0, 0.22);
+            backdrop-filter: blur(14px);
+        }
+
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 640px) {
+            .validation-links {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1 class="site-title">Urban Sketching Club</h1>
+        <nav aria-label="Hobby site navigation">
+            <a class="nav-link active" href="#" data-section="what">What</a>
+            <span class="divider" aria-hidden="true">✧</span>
+            <a class="nav-link" href="#" data-section="who">Who</a>
+            <span class="divider" aria-hidden="true">✧</span>
+            <a class="nav-link" href="#" data-section="when">When</a>
+            <span class="divider" aria-hidden="true">✧</span>
+            <a class="nav-link" href="#" data-section="where">Where</a>
+            <span class="divider" aria-hidden="true">✧</span>
+            <a class="nav-link" href="#" data-section="how">How</a>
+            <span class="divider" aria-hidden="true">✧</span>
+            <a class="nav-link" href="#" data-section="why">Why</a>
+            <span class="divider" aria-hidden="true">✧</span>
+            <a class="nav-link" href="#" data-section="prompts">AI Prompts</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="what" class="active" aria-labelledby="what-heading">
+            <h2 id="what-heading" class="section-title" tabindex="-1">What is Urban Sketching?</h2>
+            <p>Urban sketching is the practice of drawing on location in cities and towns. It mixes observation, creativity, and a little bit of adventure as you capture scenes from the streets, cafés, parks, and architecture around you.</p>
+            <div class="card">
+                <p>Rather than waiting until you get home, the idea is to record a moment as it happens: the way light hits a building facade, an interesting shadow, or the bustling energy of a market. Every sketch becomes a visual journal entry.</p>
+            </div>
+
+            <figure>
+                <img src="images/what.svg" alt="A simple city skyline sketch filtered through a warm palette." loading="lazy">
+                <figcaption>Sketching on location is about capturing atmosphere rather than perfection.</figcaption>
+            </figure>
+            <p class="prompt">Prompt used to create the image: <em>“Stylized vector illustration of a city skyline with a warm sunset palette, minimal line work, and a sketchbook vibe.”</em></p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Why people sketch</th>
+                        <th>Outcome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>To remember a place</td>
+                        <td>A visual journal entry to revisit later</td>
+                    </tr>
+                    <tr>
+                        <td>To improve observation skills</td>
+                        <td>Sharper detail and faster sketching</td>
+                    </tr>
+                    <tr>
+                        <td>To enjoy a creative break</td>
+                        <td>Reduced stress and relaxed focus</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="who" aria-labelledby="who-heading">
+            <h2 id="who-heading" class="section-title" tabindex="-1">Who is the Urban Sketching Club for?</h2>
+            <p>This club is for anyone who likes to draw and wants an excuse to explore the city. Beginners can bring a pencil and a notebook, while experienced artists can experiment with ink washes and watercolor.</p>
+
+            <figure>
+                <img src="images/who.svg" alt="A group of people in a park drawing in sketchbooks." loading="lazy">
+                <figcaption>Sketching together is a great way to share techniques and meet new friends.</figcaption>
+            </figure>
+            <p class="prompt">Prompt used to create the image: <em>“Colorful vector illustration of a small group of diverse people sketching together outdoors, friendly atmosphere, soft lighting.”</em></p>
+
+            <div class="card">
+                <h3>Club roles</h3>
+                <ul>
+                    <li><strong>Field coordinator:</strong> Chooses safe locations and checks weather.</li>
+                    <li><strong>Editor:</strong> Curates weekly sketch book and shares highlights.</li>
+                    <li><strong>New member mentor:</strong> Helps newcomers set up materials and gives quick tips.</li>
+                </ul>
+            </div>
+
+            <p class="small-muted">Everyone is welcome; you don’t need professional tools—just bring curiosity and a willingness to sit somewhere new.</p>
+        </section>
+
+        <section id="when" aria-labelledby="when-heading">
+            <h2 id="when-heading" class="section-title" tabindex="-1">When should you sketch?</h2>
+            <p>Urban sketching works best when light is interesting and the streets have character. Early mornings and late afternoons are often ideal because the shadows stretch and the air feels crisp.</p>
+
+            <figure>
+                <img src="images/when.svg" alt="A stylized clock showing ideal sketching times." loading="lazy">
+                <figcaption>Try sketching during the golden hours for dramatic shadows and light.</figcaption>
+            </figure>
+            <p class="prompt">Prompt used to create the image: <em>“Vector illustration of a clock showing morning and late afternoon, with a calm, pastel color palette and sketchbook feel.”</em></p>
+
+            <div class="card">
+                <h3>Suggested schedule</h3>
+                <ul>
+                    <li>Weekends: 10:00–12:00 for relaxed park scenes.</li>
+                    <li>Weekdays: 17:30–19:00 for city streets in golden light.</li>
+                    <li>Any day: 30‑minute “sketch sprint” for quick practice.</li>
+                </ul>
+            </div>
+
+            <p class="small-muted">Flexibility helps—if rain hits, sketch indoor cafes or markets instead of canceling.</p>
+        </section>
+
+        <section id="where" aria-labelledby="where-heading">
+            <h2 id="where-heading" class="section-title" tabindex="-1">Where do we sketch?</h2>
+            <p>The best spots are those with interesting shapes and textures: cafés, plazas, bridges, and old neighborhoods. Aim for locations where you can sit comfortably for 20–40 minutes.</p>
+
+            <figure>
+                <img src="images/where.svg" alt="Map pin and location icons for sketching spots." loading="lazy">
+                <figcaption>Choose places that inspire you—urban details, natural light, or people watching.</figcaption>
+            </figure>
+            <p class="prompt">Prompt used to create the image: <em>“Vector icon set showing a map pin, sketchbook, and café sign, with a friendly modern flat style.”</em></p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Location type</th>
+                        <th>Why it works</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Waterfront promenade</td>
+                        <td>Long perspective lines and changing reflections.</td>
+                    </tr>
+                    <tr>
+                        <td>Cultural district</td>
+                        <td>Architectural details and vibrant street life.</td>
+                    </tr>
+                    <tr>
+                        <td>Botanical garden</td>
+                        <td>Plants, textures, and a calm atmosphere.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="small-muted">We often rotate locations so everyone can suggest a favorite spot.</p>
+        </section>
+
+        <section id="how" aria-labelledby="how-heading">
+            <h2 id="how-heading" class="section-title" tabindex="-1">How to get started</h2>
+            <p>Urban sketching is easy to start with a few simple tools: a sketchbook, a pen or pencil, and the willingness to look closely. The “how” is more about your process than your gear.</p>
+
+            <figure>
+                <img src="images/how.svg" alt="Sketching supplies and a sketchbook with sample lines." loading="lazy">
+                <figcaption>Keep your setup light so you can move around freely.</figcaption>
+            </figure>
+            <p class="prompt">Prompt used to create the image: <em>“Vector illustration of a sketchbook open with a pencil and pen, minimal color palette, modern flat design.”</em></p>
+
+            <div class="card">
+                <h3>Starter checklist</h3>
+                <ul>
+                    <li>Notebook (A5–A4) with 160–200gsm paper.</li>
+                    <li>Black fineliner and a mechanical pencil.</li>
+                    <li>Small water brush or set of watercolor pans (optional).</li>
+                </ul>
+            </div>
+
+            <p class="small-muted">Don’t worry about “perfect” drawings—ask yourself what made you want to sketch that spot in the first place.</p>
+        </section>
+
+        <section id="why" aria-labelledby="why-heading">
+            <h2 id="why-heading" class="section-title" tabindex="-1">Why sketching matters</h2>
+            <p>Sketching in public slows you down. It trains your eye, helps you notice patterns, and encourages a mindful connection with where you are. It also gives you a library of memories you can revisit anytime.</p>
+
+            <figure>
+                <img src="images/why.svg" alt="Lightbulb inspiration icon representing why sketching matters." loading="lazy">
+                <figcaption>Creative practice builds confidence and sharpens observation.</figcaption>
+            </figure>
+            <p class="prompt">Prompt used to create the image: <em>“Vector lightbulb icon with warm glow and abstract shapes, representing inspiration and creative spark.”</em></p>
+
+            <div class="card">
+                <h3>Benefits</h3>
+                <ul>
+                    <li>Improved hand‑eye coordination and drawing speed.</li>
+                    <li>Stronger memory and sense of place.</li>
+                    <li>Calm focus and a creative ritual for busy weeks.</li>
+                </ul>
+            </div>
+
+            <p class="small-muted">Sketching can be a daily habit or a weekend hobby; the biggest win is staying curious.</p>
+        </section>
+
+        <section id="prompts" aria-labelledby="prompts-heading">
+            <h2 id="prompts-heading" class="section-title" tabindex="-1">AI Prompts (for images)</h2>
+            <p>All illustrations on this page were made using a simple [AI image generator] prompt style. The prompts below describe the mood and composition to keep the illustration style consistent.</p>
+
+            <ul>
+                <li><strong>What:</strong> “Stylized vector illustration of a city skyline with a warm sunset palette, minimal line work, and a sketchbook vibe.”</li>
+                <li><strong>Who:</strong> “Colorful vector illustration of a small group of diverse people sketching together outdoors, friendly atmosphere, soft lighting.”</li>
+                <li><strong>When:</strong> “Vector illustration of a clock showing morning and late afternoon, with a calm, pastel color palette and sketchbook feel.”</li>
+                <li><strong>Where:</strong> “Vector icon set showing a map pin, sketchbook, and café sign, with a friendly modern flat style.”</li>
+                <li><strong>How:</strong> “Vector illustration of a sketchbook open with a pencil and pen, minimal color palette, modern flat design.”</li>
+                <li><strong>Why:</strong> “Vector lightbulb icon with warm glow and abstract shapes, representing inspiration and creative spark.”</li>
+            </ul>
+
+            <p class="small-muted">Model used: imaginary vector-style generator (the prompts were designed to be clear and consistent for a flat illustration style).</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Designed by <a href="../kelechiotiochaaisolutions.com/" target="_blank" rel="noopener">Kelechi Otiocha AI Solutions</a></p>
+    </footer>
+
+    <script>
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('main section');
+
+        function showSection(id) {
+            sections.forEach((section) => {
+                section.classList.toggle('active', section.id === id);
+            });
+            navLinks.forEach((link) => {
+                link.classList.toggle('active', link.dataset.section === id);
+            });
+        }
+
+        function handleNavClick(event) {
+            const sectionId = event.currentTarget.dataset.section;
+            if (!sectionId) return;
+            event.preventDefault();
+            history.replaceState(null, '', `#${sectionId}`);
+            showSection(sectionId);
+            const heading = document.getElementById(sectionId + '-heading');
+            if (heading) heading.focus();
+        }
+
+        navLinks.forEach((link) => link.addEventListener('click', handleNavClick));
+
+        window.addEventListener('hashchange', () => {
+            const id = window.location.hash.replace('#', '') || 'what';
+            if (document.getElementById(id)) {
+                showSection(id);
+            }
+        });
+
+        // Load the right section on first visit
+        const initial = window.location.hash.replace('#', '') || 'what';
+        if (document.getElementById(initial)) {
+            showSection(initial);
+        } else {
+            showSection('what');
+        }
+    </script>
+</body>
+</html>
