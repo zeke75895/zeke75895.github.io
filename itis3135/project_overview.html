@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Overview | Observant Kangaroo Community Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/default.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div data-include="components/header.html"></div>
+
+    <main>
+        <h2>Project Overview</h2>
+
+        <section>
+            <h3>Project Overview</h3>
+            <p>The <strong>Observant Kangaroo Community Hub</strong> is a responsive informational website designed for a small business and student project client. Its purpose is to improve stakeholder visibility, support community outreach, and teach basic web interaction through dynamic content and design documentation.</p>
+            <ul>
+                <li>Delivers business and project information clearly.</li>
+                <li>Supports interactive learning without storing user data.</li>
+                <li>Organizes navigation, forms, product listings, and documentation.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Intended Users</h3>
+            <ul>
+                <li>Local customers looking for products and services.</li>
+                <li>Community members interested in events and updates.</li>
+                <li>Student learners reviewing the project requirements and design.</li>
+                <li>Instructors and classmates evaluating the web application.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Website Content Overview</h3>
+            <p>This site will include core content categories such as:</p>
+            <ul>
+                <li>About the client and project goals.</li>
+                <li>Product and inventory information.</li>
+                <li>Interactive forms for introductions and surveys.</li>
+                <li>Documentation of design, requirements and evaluation.</li>
+                <li>Client contact details and external resources.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Client Information</h3>
+            <dl>
+                <dt>Client Name</dt>
+                <dd>Kelechi Otiocha</dd>
+                <dt>Organization</dt>
+                <dd>Observant Kangaroo's Outback Emporium</dd>
+                <dt>Email</dt>
+                <dd>[private]</dd>
+                <dt>Phone</dt>
+                <dd>[private]</dd>
+            </dl>
+        </section>
+
+        <section>
+            <h3>Wireframe</h3>
+            <figure>
+                <a href="images/project_wireframe.svg"><img src="images/project_wireframe.svg" alt="Wireframe diagram for the Project Overview page"></a>
+                <figcaption>Wireframe for the default page layout. <a href="images/project_wireframe.svg">Open the diagram</a>.</figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h3>Site Map</h3>
+            <figure>
+                <a href="images/project_sitemap.svg"><img src="images/project_sitemap.svg" alt="Site map diagram for the Observant Kangaroo Community Hub"></a>
+                <figcaption>Site map showing all planned pages and navigation. <a href="images/project_sitemap.svg">Open the site map</a>.</figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h3>Page Design Summary</h3>
+            <p>The site will include at least five pages with distinct purposes:</p>
+            <ol>
+                <li><strong>Home</strong> - Introduces the stakeholder, highlights the project, and directs users to all major sections.</li>
+                <li><strong>Project Overview</strong> - Documents requirements, client information, site map, and dynamic plan details.</li>
+                <li><strong>Introduction Form</strong> - Collects visitor introduction details and demonstrates client-focused interaction.</li>
+                <li><strong>Product</strong> - Displays product or service details with a visual gallery and quick links.</li>
+                <li><strong>Inventory</strong> - Lists current items, categories, and interactive search/filter functionality.</li>
+            </ol>
+            <p>Additional pages include documentation, survey feedback, and website evaluations.</p>
+        </section>
+
+        <section>
+            <h3>Page Design Details</h3>
+            <div id="projectAccordion">
+                <h4>Home</h4>
+                <div>
+                    <p>Purpose: Welcome visitors and summarize the website. Audience: general users, clients, and instructors.</p>
+                    <ul>
+                        <li>Content: introduction, links to the site sections, and project highlights.</li>
+                        <li>Data input: no.</li>
+                        <li>Actions: navigate to child pages.</li>
+                    </ul>
+                </div>
+                <h4>Project Overview</h4>
+                <div>
+                    <p>Purpose: Present project requirements and design document. Audience: clients, instructors, and evaluators.</p>
+                    <ul>
+                        <li>Content: overview, client details, wireframe, site map, page plans, and dynamic functionality.</li>
+                        <li>Data input: no user data required.</li>
+                        <li>Actions: view diagrams, load plan data via AJAX, and expand page details.</li>
+                    </ul>
+                </div>
+                <h4>Introduction Form</h4>
+                <div>
+                    <p>Purpose: Capture visitor introduction details with form validation. Audience: interested users and clients.</p>
+                    <ul>
+                        <li>Content: name fields, bio, image upload, course section, and quotes.</li>
+                        <li>Data input: yes; required fields use validation.</li>
+                        <li>Actions: validate entries, display a generated summary, and reset the form.</li>
+                    </ul>
+                </div>
+                <h4>Product</h4>
+                <div>
+                    <p>Purpose: Share product and service details. Audience: customers and supporters.</p>
+                    <ul>
+                        <li>Content: product descriptions, images, features, and links.</li>
+                        <li>Data input: no user entry required.</li>
+                        <li>Actions: navigate to product details and gallery items.</li>
+                    </ul>
+                </div>
+                <h4>Inventory</h4>
+                <div>
+                    <p>Purpose: Present available inventory and expected items. Audience: customers, team members, and project reviewers.</p>
+                    <ul>
+                        <li>Content: item list, categories, and stock notes.</li>
+                        <li>Data input: search filters may use text entry.</li>
+                        <li>Actions: filter inventory, sort by category, and click for more information.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h3>Dynamic Functionality</h3>
+            <p>This page uses JavaScript for interactivity and AJAX to load supplemental project plan data. It also implements a jQuery UI accordion widget to present page design details clearly.</p>
+            <ul>
+                <li>AJAX: load project plan data from a JSON file and render it inside the page.</li>
+                <li>jQuery UI: accordion widget for page design details and expandable content.</li>
+                <li>Interactive diagrams: clickable wireframe and site map image links.</li>
+                <li>Form interaction: planned validation and summary display on the Introduction Form page.</li>
+            </ul>
+            <p>Example URLs for similar interactivity:</p>
+            <ul>
+                <li><a href="https://jqueryui.com/accordion/" target="_blank">jQuery UI Accordion example</a></li>
+                <li><a href="https://www.w3schools.com/js/js_ajax_intro.asp" target="_blank">AJAX introduction and examples</a></li>
+                <li><a href="https://codepen.io/" target="_blank">Interactive web page examples on CodePen</a></li>
+            </ul>
+        </section>
+
+        <section id="ajaxData" aria-live="polite">
+            <h3>Live Project Plan Data</h3>
+            <p>The data below is loaded dynamically from a JSON file using AJAX.</p>
+            <div id="planData">Loading project plan data...</div>
+        </section>
+
+        <section>
+            <h3>Notes</h3>
+            <p>This page was built to support the ITIS 3135 assignment instructions by documenting the proposed project, the required pages, and planned interactivity. It includes local diagrams, a site map, and a clear content plan for the website.</p>
+            <p><strong>Name:</strong> Kelechi Otiocha</p>
+            <p><strong>Date:</strong> April 5, 2026</p>
+            <p><strong>Time:</strong> 10:00 AM</p>
+        </section>
+    </main>
+
+    <div data-include="components/footer.html"></div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="scripts/HTMLInclude.min.js"></script>
+    <script src="scripts/project_overview.js"></script>
+</body>
+</html>
