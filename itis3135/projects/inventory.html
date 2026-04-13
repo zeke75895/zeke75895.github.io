@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory | Kangaroo Tech Lab</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="brand-group">
+            <a class="brand-title" href="index.html">Kangaroo Tech Lab</a>
+            <p class="brand-subtitle">Inventory page for available items.</p>
+        </div>
+        <nav class="main-nav" aria-label="Main navigation">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="project_overview.html">Project Overview</a>
+            <a class="nav-link" href="intro_form.html">Introduction Form</a>
+            <a class="nav-link" href="product.html">Product</a>
+            <a class="nav-link active" href="inventory.html">Inventory</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-intro">
+            <h1>Inventory</h1>
+            <p>Browse the current inventory of site resources and sample items available for the project.</p>
+        </section>
+
+        <section class="content-highlight">
+            <div class="inventory-controls">
+                <label for="searchInput">Search items</label>
+                <input type="search" id="searchInput" placeholder="Search by name or category">
+                <label for="categorySelect">Filter by category</label>
+                <select id="categorySelect">
+                    <option value="all">All categories</option>
+                    <option value="design">Design</option>
+                    <option value="content">Content</option>
+                    <option value="media">Media</option>
+                </select>
+            </div>
+        </section>
+
+        <section>
+            <table class="inventory-table" id="inventoryTable">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Category</th>
+                        <th>Status</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-category="design">
+                        <td>Site wireframe</td>
+                        <td>Design</td>
+                        <td>Complete</td>
+                        <td>Layout plan for the main pages and navigation structure.</td>
+                    </tr>
+                    <tr data-category="content">
+                        <td>Page content</td>
+                        <td>Content</td>
+                        <td>In progress</td>
+                        <td>Text, headings, and descriptions for the website pages.</td>
+                    </tr>
+                    <tr data-category="media">
+                        <td>Images</td>
+                        <td>Media</td>
+                        <td>Complete</td>
+                        <td>Placeholder images used for demos and page illustrations.</td>
+                    </tr>
+                    <tr data-category="design">
+                        <td>Navigation bar</td>
+                        <td>Design</td>
+                        <td>Complete</td>
+                        <td>Shared navigation that appears in the same position on every page.</td>
+                    </tr>
+                    <tr data-category="content">
+                        <td>Form interaction</td>
+                        <td>Content</td>
+                        <td>Complete</td>
+                        <td>Introduction form with validation and summary generation.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="year"></span> Kangaroo Tech Lab. Built for ITIS 3135.</p>
+    </footer>
+</body>
+</html>

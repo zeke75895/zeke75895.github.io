@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction Form | Kangaroo Tech Lab</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="brand-group">
+            <a class="brand-title" href="index.html">Kangaroo Tech Lab</a>
+            <p class="brand-subtitle">Introduction Form for visitor input.</p>
+        </div>
+        <nav class="main-nav" aria-label="Main navigation">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="project_overview.html">Project Overview</a>
+            <a class="nav-link active" href="intro_form.html">Introduction Form</a>
+            <a class="nav-link" href="product.html">Product</a>
+            <a class="nav-link" href="inventory.html">Inventory</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-intro">
+            <h1>Introduction Form</h1>
+            <p>Fill out the form below to describe yourself and your project idea. The submitted summary appears immediately.</p>
+        </section>
+
+        <section class="contact-layout">
+            <form id="introForm" class="contact-form" novalidate>
+                <label for="visitorName">Name</label>
+                <input type="text" id="visitorName" name="visitorName" placeholder="Your name" required>
+
+                <label for="visitorEmail">Email</label>
+                <input type="email" id="visitorEmail" name="visitorEmail" placeholder="you@example.com" required>
+
+                <label for="courseSection">Course section</label>
+                <input type="text" id="courseSection" name="courseSection" placeholder="e.g. ITIS 3135" required>
+
+                <label for="projectIdea">Project idea</label>
+                <textarea id="projectIdea" name="projectIdea" rows="5" placeholder="Describe your website project"></textarea>
+
+                <button class="button primary" type="submit">Submit introduction</button>
+            </form>
+
+            <div class="service-card" id="introResult">
+                <h2>Submission summary</h2>
+                <p>Complete the form to see the generated introduction summary here.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="year"></span> Kangaroo Tech Lab. Built for ITIS 3135.</p>
+    </footer>
+</body>
+</html>

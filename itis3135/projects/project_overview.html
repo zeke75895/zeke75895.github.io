@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Overview | Kangaroo Tech Lab</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="brand-group">
+            <a class="brand-title" href="index.html">Kangaroo Tech Lab</a>
+            <p class="brand-subtitle">Observant Kangaroo Community Hub project plan.</p>
+        </div>
+        <nav class="main-nav" aria-label="Main navigation">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link active" href="project_overview.html">Project Overview</a>
+            <a class="nav-link" href="intro_form.html">Introduction Form</a>
+            <a class="nav-link" href="product.html">Product</a>
+            <a class="nav-link" href="inventory.html">Inventory</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-intro">
+            <h1>Project Overview</h1>
+            <p>This project follows the ITIS 3135 design plan by building five core pages with consistent navigation, meaningful content, and interactive functionality.</p>
+        </section>
+
+        <section>
+            <h2>Project Overview</h2>
+            <p>The <strong>Kangaroo Tech Lab</strong> website supports a small business-style student project focused on accessible information, product details, and user interaction.</p>
+            <ul>
+                <li>Delivers clear business and project information.</li>
+                <li>Organizes navigation, forms, product listings, and inventory details.</li>
+                <li>Supports dynamic content with a project plan JSON file.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Intended Users</h2>
+            <ul>
+                <li>Local customers browsing products and services.</li>
+                <li>Community members looking for updates and inventory.</li>
+                <li>Students reviewing the website structure and project plan.</li>
+                <li>Instructors evaluating the static site design and interactivity.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Website Content Overview</h2>
+            <p>The site includes the following content categories:</p>
+            <ul>
+                <li>Home page introduction and navigation.</li>
+                <li>Project overview and design documentation.</li>
+                <li>Interactive introduction form with validation.</li>
+                <li>Product details and visual gallery.</li>
+                <li>Inventory items with search and filter controls.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Page Design Summary</h2>
+            <ol>
+                <li><strong>Home</strong> - introduces the site and links to all pages.</li>
+                <li><strong>Project Overview</strong> - documents the plan, audience, and data strategy.</li>
+                <li><strong>Introduction Form</strong> - captures visitor details and displays a summary.</li>
+                <li><strong>Product</strong> - showcases products, services, and benefits.</li>
+                <li><strong>Inventory</strong> - lists available inventory with search and category filters.</li>
+            </ol>
+        </section>
+
+        <section class="content-highlight">
+            <h2>Page Design Details</h2>
+            <div class="details-grid">
+                <article>
+                    <h3>Home</h3>
+                    <p>Purpose: welcome visitors and offer clear navigation. Includes real content and a strong hero section.</p>
+                </article>
+                <article>
+                    <h3>Project Overview</h3>
+                    <p>Purpose: present requirements, client details, diagrams, and dynamic project data. Audience: instructors and stakeholders.</p>
+                </article>
+                <article>
+                    <h3>Introduction Form</h3>
+                    <p>Purpose: collect visitor input and demonstrate interactive form validation. Audience: users interested in the project.</p>
+                </article>
+                <article>
+                    <h3>Product</h3>
+                    <p>Purpose: describe products and services with images. Audience: customers and reviewers.</p>
+                </article>
+                <article>
+                    <h3>Inventory</h3>
+                    <p>Purpose: provide a searchable inventory listing. Audience: customers and team members.</p>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <h2>Dynamic Functionality</h2>
+            <p>This page loads the project plan data from a JSON file using AJAX-style fetch and updates the page content dynamically.</p>
+            <ul>
+                <li>AJAX data loading via fetch.</li>
+                <li>External JavaScript file for page behavior.</li>
+                <li>Consistent navigation and shared styling across pages.</li>
+            </ul>
+        </section>
+
+        <section id="ajaxData" aria-live="polite">
+            <h2>Live Project Plan Data</h2>
+            <div id="planData">Loading project plan data...</div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="year"></span> Kangaroo Tech Lab. Built for ITIS 3135.</p>
+    </footer>
+</body>
+</html>

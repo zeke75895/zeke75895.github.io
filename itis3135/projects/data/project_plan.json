@@ -1,0 +1,17 @@
+{
+  "planTitle": "Kangaroo Tech Lab Project Plan Data",
+  "projectGoals": [
+    "Build 5+ static pages with consistent navigation",
+    "Use semantic HTML, external CSS, and external JavaScript",
+    "Include meaningful content, images, and interactive features",
+    "Match the project overview file requirements and page structure"
+  ],
+  "pages": [
+    {"name": "Home", "description": "Introductory landing page with a clear purpose and page links."},
+    {"name": "Project Overview", "description": "Project requirements, client details, wireframe, and site map."},
+    {"name": "Introduction Form", "description": "Collect visitor details and show a generated summary."},
+    {"name": "Product", "description": "Display product and service details with a visual gallery."},
+    {"name": "Inventory", "description": "Show available items with search and filter functionality."}
+  ],
+  "note": "Data loaded dynamically from a JSON file to demonstrate AJAX behavior."
+}
