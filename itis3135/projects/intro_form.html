@@ -20,6 +20,7 @@
             <a class="nav-link" href="product.html">Product</a>
             <a class="nav-link" href="inventory.html">Inventory</a>
         </nav>
+        <button id="themeToggle" class="button theme-toggle" type="button">Dark mode</button>
     </header>
 
     <main>
@@ -40,7 +41,8 @@
                 <input type="text" id="courseSection" name="courseSection" placeholder="e.g. ITIS 3135" required>
 
                 <label for="projectIdea">Project idea</label>
-                <textarea id="projectIdea" name="projectIdea" rows="5" placeholder="Describe your website project"></textarea>
+                <textarea id="projectIdea" name="projectIdea" rows="5" maxlength="200" placeholder="Describe your website project"></textarea>
+                <p id="ideaCharCount" class="muted-text">0 / 200 characters</p>
 
                 <button class="button primary" type="submit">Submit introduction</button>
             </form>

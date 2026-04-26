@@ -318,6 +318,50 @@ main {
     align-items: end;
 }
 
+.muted-text {
+    color: var(--muted);
+    margin-top: 12px;
+    font-size: 0.95rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+button.theme-toggle {
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--primary);
+    border: 1px solid rgba(192, 88, 26, 0.2);
+    padding: 0.75rem 1.2rem;
+}
+
+[data-theme="dark"] {
+    --background: #171b23;
+    --surface: #212832;
+    --text: #f4f4f5;
+    --muted: #b0b6c2;
+    --primary: #ffb56b;
+    --primary-soft: rgba(255, 181, 107, 0.12);
+    --accent: #ffd49f;
+    --border: #2f3745;
+}
+
+body {
+    background: var(--background);
+}
+
+.site-header,
+.site-footer,
+.feature-card,
+.service-card,
+.content-highlight,
+.contact-form,
+.details-grid article,
+.testimonial-card {
+    background: var(--surface);
+    border-color: var(--border);
+}
+
 .inventory-table {
     width: 100%;
     border-collapse: collapse;

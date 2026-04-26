@@ -20,6 +20,7 @@
             <a class="nav-link active" href="product.html">Product</a>
             <a class="nav-link" href="inventory.html">Inventory</a>
         </nav>
+        <button id="themeToggle" class="button theme-toggle" type="button">Dark mode</button>
     </header>
 
     <main>
@@ -53,6 +54,27 @@
                 <li>Consistent layout and typography across pages.</li>
                 <li>Clear calls to action and page links.</li>
             </ul>
+        </section>
+
+        <section class="content-highlight">
+            <h2>Interactive Product Spotlight</h2>
+            <p>Click the button to reveal a featured product recommendation for the community hub.</p>
+            <button id="highlightButton" class="button primary" type="button">Reveal today’s featured product</button>
+            <div id="highlightResult" class="service-card" aria-live="polite">
+                <p>Click the button to preview a featured item.</p>
+            </div>
+        </section>
+
+        <section class="content-highlight">
+            <h2>Subscribe for updates</h2>
+            <form id="subscribeForm" class="contact-form">
+                <label for="subscribeEmail">Email</label>
+                <input type="email" id="subscribeEmail" name="subscribeEmail" placeholder="you@example.com" required>
+                <button class="button primary" type="submit">Subscribe</button>
+            </form>
+            <div id="subscribeMessage" class="service-card" aria-live="polite">
+                <p>Enter your email and submit to receive a confirmation here.</p>
+            </div>
         </section>
 
         <section class="service-image-block">

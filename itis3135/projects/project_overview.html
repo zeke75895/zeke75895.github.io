@@ -20,6 +20,7 @@
             <a class="nav-link" href="product.html">Product</a>
             <a class="nav-link" href="inventory.html">Inventory</a>
         </nav>
+        <button id="themeToggle" class="button theme-toggle" type="button">Dark mode</button>
     </header>
 
     <main>
@@ -105,6 +106,14 @@
                 <li>External JavaScript file for page behavior.</li>
                 <li>Consistent navigation and shared styling across pages.</li>
             </ul>
+        </section>
+
+        <section class="content-highlight">
+            <h2>Interactive Page Summary</h2>
+            <button id="toggleDetailsBtn" class="button primary" type="button">Hide page details</button>
+            <div id="detailToggleSection">
+                <p>Use the button to hide or show this summary block. This demonstrates event-driven updates that change page content without a reload.</p>
+            </div>
         </section>
 
         <section id="ajaxData" aria-live="polite">
