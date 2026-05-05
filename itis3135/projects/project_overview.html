@@ -5,23 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Overview | Kangaroo Tech Lab</title>
     <link rel="stylesheet" href="styles/style.css">
+    <script src="../scripts/HTMLInclude.min.js" defer></script>
     <script src="scripts/main.js" defer></script>
 </head>
 <body>
-    <header class="site-header">
-        <div class="brand-group">
-            <a class="brand-title" href="index.html">Kangaroo Tech Lab</a>
-            <p class="brand-subtitle">Observant Kangaroo Community Hub project plan.</p>
-        </div>
-        <nav class="main-nav" aria-label="Main navigation">
-            <a class="nav-link" href="index.html">Home</a>
-            <a class="nav-link active" href="project_overview.html">Project Overview</a>
-            <a class="nav-link" href="intro_form.html">Introduction Form</a>
-            <a class="nav-link" href="product.html">Product</a>
-            <a class="nav-link" href="inventory.html">Inventory</a>
-        </nav>
-        <button id="themeToggle" class="button theme-toggle" type="button">Dark mode</button>
-    </header>
+    <div data-include="components/header.html"></div>
 
     <main>
         <section class="page-intro">
@@ -122,8 +110,6 @@
         </section>
     </main>
 
-    <footer class="site-footer">
-        <p>&copy; <span id="year"></span> Kangaroo Tech Lab. Built for ITIS 3135.</p>
-    </footer>
+    <div data-include="components/footer.html"></div>
 </body>
 </html>

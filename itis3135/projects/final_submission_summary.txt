@@ -1,0 +1,26 @@
+Final Submission Summary
+
+1. Meeting the specifications:
+- The site includes a homepage (`index.html`) plus four supporting pages: `project_overview.html`, `intro_form.html`, `product.html`, and `inventory.html`.
+- All pages now load a shared `header` and `footer` from `projects/components/` using HTML includes, ensuring consistent navigation and footer content.
+- JavaScript is separated into `projects/scripts/main.js` and provides at least three dynamic interactions:
+  - Theme toggle with saved dark/light mode state using `localStorage`.
+  - Inventory search and category filter that updates visible rows and status text dynamically.
+  - Interactive introduction form submission that validates required fields and displays a submission summary without reloading the page.
+  - Additional interactions include a live project plan fetch on the overview page, a featured product reveal button, and a subscription confirmation message.
+- The design follows CRAP principles:
+  - Contrast: readable text against clear background blocks and accent colors.
+  - Repetition: consistent header/footer, button styles, and section spacing across pages.
+  - Alignment: elements are grouped using semantic page sections and grid layouts.
+  - Proximity: related content and controls are grouped, such as the search/filter controls and the form fields.
+
+2. Critiques and updates:
+- Feedback: use a shared header/footer to avoid repeated navigation code.
+  - Update: all project pages now use shared components from `projects/components/header.html` and `projects/components/footer.html`.
+- Feedback: keep the footer focused on the site and the designer, not external school profile links.
+  - Update: the footer now only includes copyright and designer credit.
+- Feedback: add meaningful interactivity and demonstrate dynamic page behavior.
+  - Update: the site now includes multiple JavaScript-driven features across pages, including a search/filter inventory tool, live form result display, dark mode toggle, and fetched project plan content.
+
+3. Stakeholder value and future plans:
+This website is designed to meet stakeholder needs by providing a clear project structure, consistent navigation, and interactive proof-of-concept features. The homepage and overview pages communicate the project purpose clearly, while the product and inventory pages show what can be offered and how content can be filtered. Future plans include replacing placeholder images with real brand visuals, adding actual product details, and extending the inventory features to support real-time updates or contact forms for client requests.
